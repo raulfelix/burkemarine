@@ -14,6 +14,40 @@ p {
   line-height: 1.8;
   margin-bottom: 1rem; }
 
+h1, h2, p, label {
+  font-family: Arial, sans-serif; }
+
+h1, h2 {
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 1rem; }
+
+h2 {
+  font-size: 18px;
+  font-weight: bold; }
+
+p, label {
+  margin-bottom: 10px; }
+
+p {
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 1.5rem; }
+
+a:hover {
+  text-decoration: underline; }
+
+.page-title {
+  border-bottom: 1px solid #000;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase; }
+
 .p-row {
   margin: 0 auto;
   max-width: 71.25rem; }
@@ -95,17 +129,19 @@ p {
 .nav-primary {
   height: 3.125rem; }
   .nav-primary .nav-primary-item {
+    color: #3C3C3C;
     font-size: 15px;
     line-height: 3.125rem; }
-  .nav-primary .nav-primary a {
-    color: #3C3C3C; }
-  .nav-primary .nav-primary .p-row {
+    .nav-primary .nav-primary-item.is-active {
+      border-bottom: 1px solid #979797;
+      padding-bottom: 1.375rem; }
+  .nav-primary .p-row {
     border-bottom: 1px solid #979797; }
-  .nav-primary .nav-primary .p-row > div {
+  .nav-primary .p-row > div {
     text-align: center; }
-  .nav-primary .nav-primary .p-row > div:first-child {
+  .nav-primary .p-row > div:first-child {
     text-align: left; }
-  .nav-primary .nav-primary .p-row > div:last-child {
+  .nav-primary .p-row > div:last-child {
     text-align: right; }
 
 .footer {
@@ -135,6 +171,9 @@ p {
       width: 100%; }
     .footer .footer-social {
       margin: 1.25rem 0; } }
+
+.main-content {
+  padding: 1.25rem 0 3.75rem 0; }
 
 .btn {
   background-color: #1F1F1F;
