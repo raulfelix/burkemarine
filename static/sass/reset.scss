@@ -1,0 +1,19 @@
+html, body, p, h1, input {
+  margin: 0;
+  padding: 0;
+}
+
+div, input, button {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}

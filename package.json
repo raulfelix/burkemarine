@@ -1,0 +1,21 @@
+{
+  "name": "henrilloyd",
+  "version": "0.0.1",
+  "author": {
+    "name": "Raul Felix Carrizo",
+    "email": "raulfelixcarrizo@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git"
+  },
+  "scripts": {
+    "start": "gulp build",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-sass": "3.1.0"
+  },
+  "dependencies": {}
+}
