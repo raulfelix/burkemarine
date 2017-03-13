@@ -1,4 +1,4 @@
-html, body, p, h1, input {
+html, body, p, h1, input, table {
   margin: 0;
   padding: 0;
 }
@@ -16,4 +16,8 @@ a {
 p {
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+
+table {
+  border-collapse: collapse;
 }

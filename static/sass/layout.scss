@@ -1,3 +1,41 @@
 .main-content {
   padding: rem(20) 0 rem(60) 0;
 }
+
+//
+// Cart table layout
+//
+.cart-table {
+  margin-bottom: rem(16);
+  width: 100%;
+
+  .cart-row {
+    background-color: #EAEAEA;
+    height: rem(150);
+    margin-bottom: rem(20);
+    position: relative;
+    & > div {
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .cart-value {
+    display: inline-block;
+    margin-top: rem(60);
+    text-align: left;
+  }
+
+  .cart-image {
+    a {
+      display: block;
+      text-align: right;
+    }
+
+    img {
+      display: inline-block;
+      height: 100%;
+      max-height: rem(150);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+  .btn {
+    background-color: #1F1F1F;
+    border: none;
+    color: #FFFFFF;
+    height: rem(36);
+    font-size: 12px;
+    padding: 0 rem(16);
+    text-transform: uppercase;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
