@@ -1,45 +1,32 @@
 <!-- /templates/collection.liquid -->
 {% comment %}
-
   For more information on collection tags:
     - http://docs.shopify.com/themes/liquid-variables/collection
-
 {% endcomment %}
 
-{% paginate collection.products by 12 %}
+{% include 'collection-types' %}
 
-{% include 'breadcrumb' %}
+<div class="p-row">
+  <div class="p-8">
+    {% if collection.image %}<img src="{{ collection.image | img_url: 'large' }}" alt="" class="collection-feature"/>{% endif %}
+  </div>
+  <div class="p-4">
+  
+  </div>
+</div>
 
-{% comment %}
-  Use .grid--rev so that the collection tags appear below the products on mobile
-{% endcomment %}
+<div class="p-row">
+  <div class="p-12 text-center">
+    <a href="" class="btn">Show all mens</a>
+  </div>
+</div>
+
 <div class="grid--rev">
   <div class="grid__item large--three-quarters">
 
     {% comment %}
       Different markup if a collection description exists
     {% endcomment %}
-    {% if collection.description != blank %}
-      <header class="section-header">
-        <h1 class="section-header__title">{{ collection.title }}</h1>
-        <div class="rte rte--header">
-          {{ collection.description }}
-        </div>
-      </header>
-      <hr>
-      <div class="section-header">
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </div>
-    {% else %}
-      <header class="section-header">
-        <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </header>
-    {% endif %}
 
     {% comment %}
       Use class grid-uniform to have evenly sized columns clear
@@ -92,9 +79,5 @@
 
   </div>
 
-  <div class="grid__item large--one-quarter">
-    {% include 'collection-sidebar' %}
-  </div>
 </div>
 
-{% endpaginate %}

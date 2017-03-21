@@ -1,6 +1,7 @@
   .btn {
     background-color: #1F1F1F;
     border: none;
+    display: inline-block;
     color: #FFFFFF;
     height: rem(36);
     font-size: 12px;
@@ -10,4 +11,8 @@
     &:hover {
       cursor: pointer;
     }
+  }
+  
+  a.btn {
+    line-height: 36px;
   }

@@ -1,0 +1,38 @@
+.feature {
+  img {
+    width: 100%;
+  }
+}
+
+.product-feature {
+  margin-bottom: rem(20);
+}
+
+.product-thumbnails {
+  margin: 0;
+  padding: 0;
+
+  .image-overlay {
+    background-color: rgba(255,255,255,0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .image {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+    height: rem(170);
+    width: 33.3333333%;
+    
+    img {
+      width: 100%;
+    }
+  }
+
+}

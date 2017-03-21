@@ -44,6 +44,20 @@
   }
 }
 
+
+//
+// Common navigation
+//
+.nav-primary,
+.nav-secondary {
+  .p-row > div {
+    padding: 0;
+  }
+}
+
+//
+// Main navigation
+//
 .nav-primary {
   height: rem(50);
 
@@ -69,5 +83,31 @@
   }
   .p-row > div:last-child {
     text-align: right;
+  }
+}
+
+//
+// Second level navigation
+//
+.nav-secondary {
+
+  .p-row {
+    background-color: $black;
+  }
+
+  .nav-item {
+    height: rem(40);
+    display: inline-block;
+    a {
+      color: $white;
+      display: inline-block;
+      font-size: 15px;
+      line-height: rem(40);
+      padding: 0 rem(16);
+    }
+
+    &.is-active a {
+      background-color: #1F1F1F;
+    }
   }
 }

@@ -10,7 +10,10 @@
 {% if cart.item_count > 0 %}
   <div class="p-row">
     <div class="p-12">
-      <h1 class="page-title">Your bag</h1>
+      <h1 class="page-title">
+        Your bag
+        {% include 'breadcrumb' %}
+      </h1>
       <form action="/cart" method="post" novalidate class="cart table-wrap">
         <div class="cart-table">
           {% for item in cart.items %}
@@ -72,7 +75,10 @@
 {% else %}
   <div class="p-row">
     <div class="p-12">
-      <h1 class="page-title">Your bag</h1>
+      <h1 class="page-title">
+        Your bag
+        {% include 'breadcrumb' %}
+      </h1>
       <p>{{ 'cart.general.empty' | t }}</p>
       <p>{{ 'cart.general.continue_browsing_html' | t }}</p>
     </div>

@@ -1,0 +1,35 @@
+<!-- /snippets/collection-sidebar.liquid -->
+{% comment %}
+
+  Secondary navigation for the product types, vendors, and tags.
+  These can be based on the current collection or all products. Details in comments below.
+
+  Note: Clicking on a tag will filter the products within the current collection.
+  Clicking on a type or vendor link will take you out of the current collection
+  to a standalone collection page. E.g. /collections/vendors?q=Pepsi
+
+{% endcomment %}
+
+{% comment %}
+  Product tags in the current collection
+{% endcomment %}
+
+<div class="nav-secondary">
+  <div class="p-row">
+    <div class="p-12">
+      {% if collection.all_tags.size > 0 %}
+        {% for tag in collection.all_tags %}
+          {% if current_tags contains tag %}
+            <div class="nav-item is-active">
+              {{ tag | link_to_remove_tag: tag }}
+            </li>
+          {% else %}
+            <div class="nav-item">
+              {{ tag | link_to_tag: tag }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{% comment %}
+  Product types in the current collection
+{% endcomment %}
+
+<div class="nav-secondary">
+  <div class="p-row">
+    <div class="p-12">
+      {% if collection.all_types.size > 0 %}
+        {% for product_type in collection.all_types %}
+          {% if current_type contains product_type %}
+            <div class="nav-item is-active">
+              {{ product_type | link_to_remove_type: product_type }}
+            </li>
+          {% else %}
+            <div class="nav-item">
+              {{ product_type | link_to_type: product_type }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

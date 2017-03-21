@@ -1,0 +1,78 @@
+.variant-select {
+  display: none;
+}
+
+/* Label */
+.swatch {
+  margin-bottom: rem(20);
+
+  // Hide radio buttons
+  input { 
+    display:none;
+  }
+
+  .swatch-header {
+    display: inline-block;
+    font-size: 20px;
+    vertical-align: middle;
+    margin-right: rem(10);
+  }
+
+  .swatch-element {
+    display: inline-block;
+    margin: 0 rem(8) 0 0;
+    position: relative;
+    vertical-align: middle;
+
+    label {
+      font-size: rem(20);
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  
+    &.color {
+      label {
+        border-radius: 20px;
+        display: block;
+        margin: 0;
+        height: rem(20);
+        width: rem(20);
+      }
+    }
+  }
+}
+
+//
+// Size items
+//
+.swatch .swatch-element label {
+  border: 1px solid transparent;
+  padding: rem(3);
+} 
+.swatch .swatch-element input:checked + label {
+  border: 1px solid #000;
+} 
+
+
+//
+// Color items
+//
+.swatch .swatch-element.color label {
+  padding: 0;
+}
+.swatch .swatch-element.color input:checked + label:before {
+  content: '';
+  border: 1px solid #979797;
+  width: rem(22);
+  height: rem(22);
+  position: absolute;
+  border-radius: 50%;
+  top: rem(-2);
+  left: rem(-2);
+}
+.swatch .swatch-element.color input:checked + label {
+  border: none;
+}
